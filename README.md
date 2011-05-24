@@ -1,13 +1,13 @@
-h1. Ruby Ocurrence Counter
+== Ruby Ocurrence Counter
 
 Utility to count ocurrences from standard data types in Ruby.
 Feel free to improve my source-code.
 
-h2. Add to your Gemfile
+=== Add to your Gemfile
 
     gem "ocurrence-counter", :git => "git://github.com/endel/ocurrence-counter.git", :branch => "master"
 
-h2. Examples:
+=== Examples:
     
     # Counting Array item ocurrences
     array = [1,1,1,1,1,3,3,1,3,3,3,5,5]
