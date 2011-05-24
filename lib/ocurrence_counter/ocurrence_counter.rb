@@ -19,13 +19,12 @@ class OcurrenceCounter
   end
   
   def count
-    ocurrences = Hash.new
+    ocurrences = Hash.new(0)
     @source.send(@iteration_method) do |value|
       @pre_process.each {|hook| value = (hook.is_a? Proc) ? hook.call(value) : value.send(hook)}
       # Skip invalid ocurrences
       next if value.nil?
       
-      ocurrences[value] ||= 0
       ocurrences[value] += 1
     end
     ocurrences
