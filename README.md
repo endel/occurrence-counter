@@ -5,10 +5,9 @@ Feel free to improve my source-code.
 
 ## Add to your Gemfile
 
-    gem "ocurrence-counter", :git => "https://github.com/endel/ocurrence-counter.git", :branch => "master"
+    gem "ocurrence_counter", :git => "https://github.com/endel/ocurrence-counter.git", :branch => "master"
 
 ## Examples:
-    
     # Counting Array item ocurrences
     array = [1,1,1,1,1,3,3,1,3,3,3,5,5]
     array.count_ocurrences
