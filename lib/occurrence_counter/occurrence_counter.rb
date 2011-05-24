@@ -1,11 +1,11 @@
 
-class OcurrenceCounter
-  attr_reader :pre_process, :post_process, :source
+class OccurrenceCounter
+  attr_reader :pre_process, :source
   
   def self.count(source, *pre_process)
-    ocurrece_counter = OcurrenceCounter.new(source)
-    ocurrece_counter.pre_process(*pre_process) if pre_process.length > 0
-    ocurrences = ocurrece_counter.count
+    occurrece_counter = OccurrenceCounter.new(source)
+    occurrece_counter.pre_process(*pre_process) if pre_process.length > 0
+    occurrece_counter.count
   end
   
   def initialize(source)
@@ -19,15 +19,15 @@ class OcurrenceCounter
   end
   
   def count
-    ocurrences = Hash.new(0)
+    occurrences = Hash.new(0)
     @source.send(@iteration_method) do |value|
       @pre_process.each {|hook| value = (hook.is_a? Proc) ? hook.call(value) : value.send(hook)}
-      # Skip invalid ocurrences
+      # Skip invalid occurrences
       next if value.nil?
       
-      ocurrences[value] += 1
+      occurrences[value] += 1
     end
-    ocurrences
+    occurrences
   end
   
 end

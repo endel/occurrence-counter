@@ -6,12 +6,12 @@ require 'rake/clean'
 VERSION = '0.0.1'
 
 spec = Gem::Specification.new do |s|
-  s.name = 'ocurrence-counter'
+  s.name = 'occurrence-counter'
   s.version = VERSION
-  s.summary = 'Ruby utility to count ocurrences from standard data types.'
-  s.description = 'Utility to count ocurrences from standard data types.'
+  s.summary = 'Ruby utility to count occurrences from standard data types.'
+  s.description = 'Utility to count occurrences from standard data types.'
   s.author = 'Endel Dreyer'
-  s.homepage = "http://github.com/endel/ocurrence-counter"
+  s.homepage = "http://github.com/endel/occurrence-counter"
   s.email = 'endel.dreyer@gmail.com'
   s.files = %w(LICENSE Rakefile) + Dir.glob("{bin,lib,test}/**/*")
   s.require_path = "lib"
@@ -26,5 +26,5 @@ end
 task :install do
   rm_rf "pkg/*.gem"
   `rake gem`
-  puts `gem install pkg/ocurrence-counter-#{VERSION}.gem`
+  puts `gem install pkg/occurrence-counter-#{VERSION}.gem`
 end
