@@ -5,7 +5,7 @@ Feel free to improve my source-code.
 
 ## Add to your Gemfile
 
-    gem "ocurrence-counter", :git => "git://github.com/endel/ocurrence-counter.git", :branch => "master"
+    gem "ocurrence-counter", :git => "https://github.com/endel/ocurrence-counter.git", :branch => "master"
 
 ## Examples:
     
